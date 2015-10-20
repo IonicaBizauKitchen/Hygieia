@@ -2,11 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.capitalone.dashboard</groupId>
-	<artifactId>github-collector</artifactId>
+	<artifactId>udeploy-deployment-collector</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>0.1.1</version>
 	<name>${project.groupId}:${project.artifactId}</name>
-	<description>Github Collector Microservice collecting stats from Github</description>
+	<description>Deploy Collector microservice currently collects data from IBM UCD</description>
 	<url>https://github.com/capitalone/Hygieia</url>
 
 
@@ -17,15 +17,15 @@
 	</parent>
 
 	<distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 
 	<!-- Package as an executable jar -->
 	<build>
@@ -46,7 +46,6 @@
 	<properties>
 		<java.version>1.7</java.version>
 	</properties>
-
 
 	<dependencies>
 		<!-- Project Deps -->
@@ -99,10 +98,7 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-		</dependency>
+
 	</dependencies>
 
 </project>
